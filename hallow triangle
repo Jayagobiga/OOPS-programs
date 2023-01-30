@@ -1,0 +1,27 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+    int i,j,rows;
+    cout << "Enter the number of rows " << endl;
+    cin>>rows;//get input from user
+    for(i=1; i<=rows; i++){ //iterates for print row
+        for(j=i; j<=rows; j++){
+        cout<<" ";//print space
+    }
+        for(j=1; j<=i; j++){
+                if(i==rows || j==1 || j==i)
+                {
+                    cout<<"*";
+                }
+                else{
+                    cout<<" ";
+                }
+
+    }
+    cout<<"\n";
+    }
+    getch();
+    return 0;
+}
