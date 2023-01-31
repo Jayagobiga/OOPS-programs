@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+#include <bitset>
+
+using namespace std;
+
+int main() {
+    int decimal_num;
+    cout << "Enter decimal number: ";
+    cin >> decimal_num;
+
+    // Binary conversion
+    cout << "Binary equivalent: " << bitset<32>(decimal_num) << endl;
+
+    // Octal conversion
+    int octal_num = 0, i = 1;
+    while (decimal_num != 0) {
+        octal_num += (decimal_num % 8) * i;
+        decimal_num /= 8;
+        i *= 10;
+    }
+    cout << "Octal equivalent: " << octal_num << endl;
+
+    return 0;
+}
